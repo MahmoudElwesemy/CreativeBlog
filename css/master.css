@@ -1,0 +1,1087 @@
+:root {
+    --main-color: #ff305b;
+    --second-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* start landing page */
+
+.landing-page {
+    min-height: 100vh;
+    background-image: url(../images/01.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.landing-page .overlay {
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.landing-page .header {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 4;
+}
+
+.header .logo {
+    width: 25%;
+    text-align: center;
+}
+
+.header .logo::first-letter {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.header .links {
+    width: 70%;
+    list-style: none;
+    text-align: right;
+    padding: 5px;
+}
+
+.header .links li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.header .links a {
+    text-decoration: none;
+    color: #fff;
+    transition: .4s;
+}
+
+.header .links .active {
+    color: var(--main-color);
+}
+
+.header .links a:hover,
+.header .links a.active {
+    color: var(--main-color);
+}
+
+.header .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    display: none;
+    cursor: pointer;
+}
+
+.landing-page .header-text {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.landing-page .header-text h3 {
+    font-size: 1.8rem;
+}
+
+.landing-page .header-text h1 span {
+    color: var(--main-color);
+}
+
+.landing-page .header-text p {
+    font-size: 1.3rem;
+    padding-bottom: 1.2rem;
+}
+
+.landing-page .header-text button:hover {
+    background-color: var(--main-color);
+    color: #fff
+}
+
+@media screen and (max-width:768px) {
+    .landing-page .header {
+        flex-wrap: wrap;
+        background-color: #000;
+    }
+    .header .logo {
+        width: 80%;
+    }
+    .header .links {
+        width: 55%;
+        margin: auto;
+        padding: 20px;
+        text-align: left;
+        display: none;
+    }
+    .header .links li {
+        display: block;
+        padding-bottom: 25px;
+    }
+    .header .hamburger {
+        display: block;
+    }
+    .landing-page .header-text {
+        width: 75%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .landing-page .header-text {
+        width: 90%;
+        padding: 20px;
+    }
+    .landing-page .header-text h1 {
+        font-size: 1.2rem;
+    }
+    .landing-page .header-text h3 {
+        font-size: 1.2rem;
+    }
+    .landing-page .header-text p {
+        font-size: 1rem;
+        padding-bottom: 1.2rem;
+    }
+}
+
+
+/* end landing page */
+
+
+/* start setting box */
+
+.setting-box {
+    width: 200px;
+    min-height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    z-index: 9999;
+    transition: 1.5s
+}
+
+.apear {
+    left: 0;
+}
+
+.setting-box .iconBox {
+    position: absolute;
+    top: 30%;
+    left: 200px;
+    background-color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.setting-box .iconBox .fa-gear {
+    padding: 10px;
+}
+
+.setting-box .setting-container {
+    padding: 10px;
+}
+
+.setting-box .colorList {
+    text-align: center;
+}
+
+.setting-box .colorList h3 {
+    text-transform: capitalize;
+}
+
+.setting-box .colorList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.setting-box .colorList li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.setting-box .colorList li.active {
+    opacity: 1;
+}
+
+.setting-box .colorList li:nth-child(1) {
+    background-color: #ff305b;
+}
+
+.setting-box .colorList li:nth-child(2) {
+    background-color: #20c997;
+}
+
+.setting-box .colorList li:nth-child(3) {
+    background-color: #0078ff;
+}
+
+.setting-box .colorList li:nth-child(4) {
+    background-color: rgb(21, 221, 221)
+}
+
+.setting-box .colorList li:nth-child(5) {
+    background-color: rgb(195, 16, 180);
+}
+
+.setting-box .backgroundlist {
+    text-align: center;
+}
+
+.setting-box .backgroundlist h3 {
+    text-transform: capitalize;
+}
+
+.setting-box .backgroundlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.setting-box .backgroundlist li {
+    display: inline-block;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.setting-box .backgroundlist li img {
+    width: 100%;
+    height: 100%
+}
+
+.setting-box .apear-bullets {
+    text-align: center;
+    margin: auto
+}
+
+.setting-box .apear-bullets h3 {
+    text-transform: uppercase;
+}
+
+.setting-box .apear-bullets button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+
+/* end setting box */
+
+
+/* start scroll styling */
+
+.scrollUp {
+    position: fixed;
+    top: 90%;
+    right: 3%;
+    z-index: 99999;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+    color: #fff
+}
+
+
+/* end scroll styling */
+
+
+/* start bullets styling */
+
+.nav-bullet {
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.nav-bullet .bullet {
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-bullet .bullet .toolip {
+    position: absolute;
+    width: 90px;
+    background-color: var(--main-color);
+    right: 31px;
+    text-align: center;
+    color: #fff;
+    cursor: default;
+    pointer-events: none;
+    display: none;
+}
+
+.nav-bullet .bullet:hover .toolip {
+    display: block;
+}
+
+.nav-bullet .bullet .toolip:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent var(--main-color);
+    width: 0;
+    height: 0;
+    left: 100%;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+
+/* end bullets styling */
+
+
+/* start about me styling */
+
+.about-me,
+.my-skills,
+.gallary {
+    padding: 2rem;
+    position: relative;
+}
+
+.about-me-header,
+.my-skills .my-skills-header,
+.portfolio .portfolio-header,
+.gallary-header,
+.services-header,
+.testmonials-header,
+.contact-header {
+    margin: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.about-me h2,
+.my-skills h2,
+.portfolio h2,
+.gallary h2,
+.services h2,
+.testmonials h2,
+.contact h2 {
+    font-size: 8.2rem;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    color: #dee3e4;
+}
+
+.about-me h3,
+.my-skills h3,
+.portfolio h3,
+.gallary h3,
+.services .services-header h3,
+.testmonials h3,
+.contact h3 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem
+}
+
+.about-me h3::after,
+.my-skills h3::after,
+.portfolio h3::after,
+.gallary h3 ::after,
+.services .services-header h3::after,
+.testmonials h3::after,
+.contact h3::after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.about-me-details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.about-me .profile {
+    width: 26%;
+    height: 390px;
+    position: relative;
+    border: 7px solid #696c6d;
+    border-radius: 10px;
+}
+
+.about-me .profile .profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+}
+
+.about-me .profile .profile-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.about-me .profile .img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .4);
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me .profile .img-overlay i {
+    color: #Fff;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.about-me .profile .img-overlay i:hover {
+    color: var(--main-color)
+}
+
+.profile-img:hover .img-overlay {
+    top: 0;
+}
+
+.profile-details {
+    width: 50%;
+}
+
+.profile-details p:nth-child(2) {
+    font-size: 1.2rem;
+    color: #696c6d;
+    border-bottom: 1px dashed #000;
+    padding-bottom: 15px;
+}
+
+.profile-details p:first-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.profile-details p:first-child span {
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+
+.profile-details .profile-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.profile-details .profile-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-details .profile-list li {
+    padding: 10px;
+}
+
+.profile-details .profile-list span {
+    font-weight: 600;
+}
+
+.profile-details button {
+    padding: 15px 15px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 7px;
+    transition: .5s;
+}
+
+.profile-details a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.profile-details button:hover {
+    background-color: #97155c
+}
+
+@media screen and (max-width:1200px) {
+    .about-me .profile {
+        border: none
+    }
+    .about-me .profile .profile-img {
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .about-me h2,
+    .my-skills h2,
+    .portfolio h2,
+    .gallary h2,
+    .services h2,
+    .testmonials h2,
+    .contact h2 {
+        font-size: 6.2rem;
+    }
+    .about-me h3,
+    .my-skills h3,
+    .portfolio h3,
+    .gallary h3,
+    .services .services-header h3,
+    .testmonials h3,
+    .contact h3 {
+        top: 20%;
+    }
+    .about-me .profile {
+        width: 35%
+    }
+    .profile-details {
+        width: 60%
+    }
+}
+
+@media screen and (max-width:768px) {
+    .about-me .profile {
+        width: 50%;
+    }
+    .profile-details {
+        width: 80%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-me h2,
+    .my-skills h2,
+    .portfolio h2,
+    .gallary h2,
+    .services h2,
+    .testmonials h2,
+    .contact h2 {
+        font-size: 3rem;
+    }
+    .about-me h3,
+    .my-skills h3,
+    .portfolio h3,
+    .gallary h3,
+    .services .services-header h3,
+    .testmonials h3,
+    .contact h3 {
+        font-size: 1.3rem;
+        top: 7%;
+    }
+    .about-me .profile {
+        width: 80%;
+    }
+    .profile-details {
+        width: 80%
+    }
+}
+
+
+/* end about me styling */
+
+
+/* start my skills styling */
+
+.my-skills {
+    background-color: var(--second-color);
+}
+
+.my-skills-details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.my-skills-details .details {
+    width: 45%;
+    padding: 20px;
+}
+
+.my-skills-details .skill-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-details {
+    width: 100%;
+    height: 20px;
+    background-color: #696c6d;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-details span {
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: 1s all;
+    z-index: 2;
+}
+
+@media screen and (max-width:992px) {
+    .my-skills-details .details {
+        width: 40%
+    }
+}
+
+@media screen and (max-width:768px) {
+    .my-skills-details .details {
+        width: 70%
+    }
+}
+
+@media screen and (max-width:768px) {
+    .my-skills-details .details {
+        width: 85%
+    }
+}
+
+
+/* end my skills styling */
+
+
+/* start portfolio styling */
+
+.portfolio {
+    padding: 30px;
+}
+
+.portfolio .portfolio-menu {
+    text-align: center;
+}
+
+.portfolio-menu ul {
+    list-style: none;
+}
+
+.portfolio-menu ul li {
+    display: inline-block;
+    padding-right: 18px;
+    cursor: pointer;
+    transition: .6s;
+    color: #6c757d;
+    text-transform: capitalize;
+    padding: 12px;
+}
+
+.portfolio-menu li:hover {
+    color: var(--main-color);
+}
+
+.portfolio-menu li:hover:after {
+    width: 100%;
+}
+
+.portfolio-menu a.active {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.portfolio .portfolio-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.portfolio .portfolio-content .project {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.portfolio .portfolio-content .project:hover img {
+    transform: scale(1.2, 1.2);
+}
+
+.portfolio .portfolio-content .project:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio .portfolio-content .project img {
+    width: 100%;
+    height: 100%;
+    transition: 1s transform;
+}
+
+.portfolio .portfolio-content .project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0%;
+    right: 0%;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 5555;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: 1s opacity;
+}
+
+@media screen and (max-width:768px) {
+    .portfolio .portfolio-content .project {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .portfolio {
+        padding: 10px;
+    }
+    .portfolio .portfolio-content .project {
+        width: 100%;
+    }
+    .portfolio .portfolio-content {
+        padding: 15px
+    }
+}
+
+
+/* end portfolio styling */
+
+
+/* start gallary styling */
+
+.gallary {
+    background-color: var(--second-color);
+    padding: 30px;
+    text-align: center;
+}
+
+.gallary .gallary-imgs img {
+    width: 16%;
+    height: 150px;
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.gallary .img-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    visibility: hidden;
+}
+
+.gallary .img-overlay img {
+    border: 3px solid #fff;
+}
+
+.gallary .img-overlay i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+}
+
+.gallary .img-overlay .fa-xmark {
+    position: absolute;
+    top: 10%;
+}
+
+.gallary .img-overlay img {
+    width: 75%;
+    height: 90%
+}
+
+@media screen and (max-width:768px) {
+    .gallary .gallary-imgs img {
+        width: 25%;
+        height: 100px;
+    }
+    .gallary .img-overlay img {
+        width: 80%;
+        height: 60%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .gallary .gallary-imgs img {
+        width: 40%;
+    }
+    .gallary .img-overlay img {
+        width: 60%;
+        height: 25%
+    }
+}
+
+
+/* end gallary styling */
+
+
+/* start services styling */
+
+.services {
+    padding: 30px;
+}
+
+.services .services-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services .service {
+    width: 23%;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--second-color);
+}
+
+.services .service h3 {
+    text-transform: uppercase;
+}
+
+.services .service i {
+    font-size: 30px;
+    border-radius: 50%;
+    border: 8px solid var(--main-color);
+    padding: 25px;
+    transition: .6s;
+}
+
+.services .service p {
+    line-height: 25px;
+    color: #696c6d
+}
+
+.services .service i:hover {
+    border: 8px solid #fff;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    .services .service {
+        width: 38%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .services .service {
+        width: 80%
+    }
+}
+
+
+/* end services styling */
+
+
+/* start testimonials styling */
+
+.testmonials {
+    background-color: var(--second-color);
+    padding: 30px;
+}
+
+.testmonials .tes-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.testmonials .tes-content .tes-box {
+    width: 28%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+}
+
+.testmonials .tes-content .tes-box h4 {
+    padding: 20px 0 10px;
+    margin: 0;
+}
+
+.testmonials .tes-content .tes-box span {
+    color: #6c757d;
+}
+
+.tes-content .tes-box img {
+    border-radius: 30px;
+    float: left;
+    margin-right: 30px;
+}
+
+.testmonials .tes-content .tes-box p {
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.testmonials .tes-content .tes-box i {
+    color: orangered;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media screen and (max-width:768px) {
+    .testmonials .tes-content {
+        flex-wrap: wrap;
+    }
+    .testmonials .tes-content .tes-box {
+        width: 80%
+    }
+}
+
+
+/* ens testimonials styling */
+
+
+/* start contact styling */
+
+.contact .contact-details {
+    width: 40%;
+    margin: auto;
+}
+
+.contact .contact-details span {
+    font-weight: 600;
+}
+
+.contact .social {
+    text-align: center
+}
+
+.contact .social a {
+    text-decoration: none;
+    padding: 8px;
+    color: var(--main-color)
+}
+
+.contact .contact-details .social i {
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 8px;
+    transition: .6s;
+}
+
+.contact .contact-details .social i:hover {
+    background-color: var(--main-color);
+    color: #fff
+}
+
+.contact .sendMesage {
+    width: 50%;
+    margin: auto;
+    padding: 25px;
+}
+
+.contact .sendMesage input {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 12px;
+}
+
+.contact .sendMesage textarea {
+    width: 100%;
+    padding: 12px;
+    height: 100px;
+}
+
+.contact .sendMesage button {
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .contact .social a {
+        padding: 2px;
+    }
+    .contact .contact-details {
+        width: 60%;
+    }
+    .contact .sendMesage {
+        width: 70%;
+    }
+}
+
+
+/* end contact styling */
+
+
+/* start footer styling */
+
+footer {
+    background-color: #333333;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--main-color)
+}
+
+
+/* end footer styling */
